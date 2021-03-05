@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../Downloads/starter_files"
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}
