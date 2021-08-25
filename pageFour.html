@@ -23,13 +23,14 @@
                     },
     
                     account: {
-                        id:           'Dunder Mifflin' // Highly recommended
+                        id:           'Dunder Mifflin', // Highly recommended
                         // name:         // Optional
                         // is_paying:    // Recommended if using Pendo Feedback
                         // monthly_value:// Recommended if using Pendo Feedback
                         // planLevel:    // Optional
                         // planPrice:    // Optional
                         // creationDate: // Optional
+                        PesScore: 'passInTheScoreHere'
     
                         // You can add any additional account level key-values here,
                         // as long as it's not one of the above reserved names.
@@ -41,22 +42,22 @@
 
 <h1>This would be my 4th page if I had one!</h1>
 
-<a id="testOne" data-pendo="customTest" data-test="whatever" data-test="michaela" href="https://www.reddit.com">Link to Reddit</a>
+<a id="testOne" data-pendo="customTest" data-test="whatever" data-test="michaela" href="https://www.reddit.com">Link to Reddit</a> [data-pendo=customTest]
 
 <a href="index.html">Home</a>
 
 <ul class="tierOneClass adminClass" title="navOne">
     <li id="tierOneID" disabled>This represents nav menu 1</li>
-    <li id="oneOne" class="uniqueOne">Nav item 1</li>
-    <li id="oneTwo" class="uniqueTwo">Nav item 2</li>
-    <li id="oneThree" class="uniqueThree">Nav item 3</li>
+    <li id="oneOne simpleIntakeFormWeight" class="uniqueOne">Nav item 1</li>
+    <li id="oneTwo simpleIntakeFormDate" class="uniqueTwo">Nav item 2</li>
+    <li id="oneThree formOne simpleIntakeFormName" class="uniqueThree">Nav item 3</li>
         <ul  title="navTwo" class="tierTwoClass"> 
             <li id="twoOne" data-pendo="customTest" class="uniqueFour">This represents nav menu 2 Title </li>
             <li id="twoTwo" class="uniqueFive brandon">Nav item 2</li>
             <li id="twoThree" class="uniqueSix brandon">Nav item 3</li>
             <li id="twoFour" class="uniqueSeven">Nav item 4</li>
             <ul class="tierThreeClass" title="navThree">
-                <li id="tierThreeID" class="weili">
+                <li id="tierThreeID" data-pendo=customTestThree class="weili">
                     This represents nav menu 3 Title
                 </li>
                 <li id="threeOne" class="uniqueEight owen data-pendo=maybe">Nav item 1</li>
