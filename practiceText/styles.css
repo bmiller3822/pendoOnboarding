@@ -1,0 +1,21 @@
+p::first-letter{
+    text-transform:capitalize;
+}
+
+.pokemon{
+    border-style: solid;   
+    border-radius: 20px;
+    width: 250px;
+    text-align: center;
+}
+
+#redBanner{
+    background-color: red;
+    width: 300px;
+    text-align: center;
+    
+}
+
+#titleText{
+    color: white;
+}

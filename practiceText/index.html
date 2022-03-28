@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id='redBanner'>
+        <h1 id="titleText"> Brandon's Pokedex </h1>
+    </div>
+    <div id="body">
+
+    </div>
+    <script>
+        function getPokemon(){
+            let id = 1;
+            let url = "https://pokeapi.co/api/v2/pokemon/";
+            while (id<152){
+                fetch(url + id)
+                .then((response) => response.json())
+                .then((data) => {
+                        console.log(data)
+                        var pokemonDetails = document.createElement('p')
+                        pokemonDetails.classList.add('pokemon')
+                        pokemonDetails.classList.add(data.name)
+                        var nameText = document.createTextNode(data.name + ": " + "Height - " + data.height + ", Weight - " + data.weight)
+                        var pokemonPicture = document.createElement("img")
+                        pokemonPicture.src = data.sprites.front_default
+                        pokemonDetails.appendChild(nameText)
+                        pokemonDetails.appendChild(pokemonPicture)
+                        var pokemonRecord = document.getElementById("body")
+                        pokemonRecord.appendChild(pokemonDetails)
+                        
+                        })
+                        id++
+                        
+                        //Having difficulties figuring out how to return the data from the fetch, so I'm going to call the fetch again in the below function for the sake of time. Not great, but it'll work.
+            }
+
+           
+            
+        }
+        
+        
+
+            
+        
+        getPokemon();
+       
+        
+    </script>
+    
+</body>
+</html>
+
+<!--
+Pseudo Code
+Need to grab all the capitalize classes and do an onclick function, should likely be after while loop
+create a div with more information, p tag for important attributes
+
+Style everything
+
+function showPokemonDetails(){
+            
+            var clickPokemon = document.getElementById(data.name)
+            clickPokemon.onclick(document.createElement('div'))
+        
+            }
+
+            showPokemonDetails();
+
+
+            function showPokemonDetails(){
+            
+            var clickPokemon = document.getElementsByClassName('pokemon')
+            clickPokemon.addEventListener("click",
+                console.log("hello!")
+            );
+
+             showPokemonDetails();
+            
+        
+        }
+
+        Can get height, weight, id, species, sprites.front_default
+-->
+
